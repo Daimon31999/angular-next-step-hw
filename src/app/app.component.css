@@ -1,7 +1,9 @@
 .wrapper {
   padding: 3rem;
   display: flex;
+  max-width: 40rem;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .title {
@@ -11,11 +13,42 @@
 
 .my-input {
   border-radius: 10px;
-  /* border: none; */
+  border: 2px solid black;
   height: 3rem;
   padding: 13px 20px;
   font-size: 20px;
   width: 50%;
   margin-left: 1rem;
+  min-width: 24rem;
+}
+
+.submit-button {
+  background-color: #017AFF;
+  width: 8rem;
+  padding: 1rem;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.submit-button:hover {
+  background-color: #0157b3;
+}
+
+.my-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }

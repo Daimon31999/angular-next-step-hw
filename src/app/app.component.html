@@ -1,13 +1,29 @@
 <div class="wrapper">
-  <h1 class="title">
-    Indian Rupee to Moldovan Leu <br />
-    1 :
-    {{ indianRupeeToMdl }}
-  </h1>
+  <h1 class="title">Reactive form</h1>
 
-  <label>
-    Rupee:
-    <input type="number" [formControl]="myInput" class="my-input" />
-  </label>
-  <h1>MDL - {{ mdl | number: "1.2-2" }}</h1>
+  <form class="my-form">
+    <label class="my-label">
+      Name:
+      <input type="text" [formControl]="name" class="my-input" />
+    </label>
+
+    <label class="my-label">
+      Age:
+      <input type="number" [formControl]="age" class="my-input" />
+    </label>
+    <label class="my-label">
+      Email:
+      <input type="email" [formControl]="email" class="my-input" />
+    </label>
+    <button type="button" (click)="onSubmit()" class="submit-button">
+      Submit
+    </button>
+
+    <pre *ngFor="let user of userList">
+      Name: {{ user.name }}
+      Age: {{ user.age }}
+      Email: {{ user.email }}
+    </pre>
+    <!-- {{ userList.map((user) => ) }} -->
+  </form>
 </div>
